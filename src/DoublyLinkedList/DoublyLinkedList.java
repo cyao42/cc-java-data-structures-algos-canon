@@ -1,7 +1,7 @@
 public class DoublyLinkedList {
     
-  this.head;
-  this.tail;
+  Node head;
+  Node tail;
 
   public DoublyLinkedList() {
     this.head = null;
@@ -19,7 +19,7 @@ public class DoublyLinkedList {
     this.head = newHead;
 
     if (this.tail == null) {
-      this.tail = newTail;
+      this.tail = newHead;
     }
   }
 
@@ -55,23 +55,55 @@ public class DoublyLinkedList {
     return removedHead.data;
   }
 
-
-
-
-
-
-
-
-
-
-
   public String removeTail() {
+    Node removedTail = this.tail;
 
+    if (removedTail == null) {
+      return null;
+    }
+    this.tail = removedTail.getPreviousNode();
+
+    if (this.tail != null) {
+      this.tail.setNextNode(null);
+    }
+    if (removedTail == this.head) {
+      this.removeHead();
+    }
+    return removedTail.data;
   }
 
-  public String removeByData(String data) {
+  public Node removeByData(String data) {
 
+    Node nodeToRemove = null;
+    Node currentNode = this.head;
+
+    while (currentNode != null) {
+      if (currentNode.data == data) {
+        nodeToRemove = currentNode;
+        break;
+      }
+      currentNode = currentNode.getNextNode();
+    }
+
+    if (nodeToRemove == null) {
+      return null;
+    }
+    if (nodeToRemove == this.head) {
+      this.removeHead();
+    } else if (nodeToRemove == this.tail) {
+      this.removeTail();
+    } else {
+      Node nextNode = nodeToRemove.getNextNode();
+      Node previousNode = nodeToRemove.getPreviousNode();
+      nextNode.setPreviousNode(previousNode);
+      previousNode.setNextNode(nextNode);
+    }
+    return nodeToRemove;
   }
+
+
+
+
 
   public String toString() {
     Node currentNode = this.head;
