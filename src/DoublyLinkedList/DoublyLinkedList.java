@@ -101,10 +101,6 @@ public class DoublyLinkedList {
     return nodeToRemove;
   }
 
-
-
-
-
   public String toString() {
     Node currentNode = this.head;
     String output = "<head> ";
@@ -115,24 +111,5 @@ public class DoublyLinkedList {
     output += "<tail>";
     return output;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
