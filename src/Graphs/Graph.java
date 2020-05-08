@@ -2,9 +2,9 @@
 import java.util.ArrayList;
 
 public class Graph {
-	ArrayList<Vertex> vertices;
-	boolean isDirected;
-	boolean isWeighted;
+	private ArrayList<Vertex> vertices;
+	private boolean isDirected;
+	private boolean isWeighted;
 	
 	public Graph(boolean inputIsWeighted, boolean inputIsDirected) {
 		this.vertices = new ArrayList<Vertex>();
@@ -12,6 +12,9 @@ public class Graph {
 		this.isDirected = inputIsDirected;
 	}
 	
+	public ArrayList<Vertex> getVertices(){
+		return this.vertices;
+	}
 	
 	public Vertex addVertex(String data) {
 		Vertex newVertex = new Vertex(data);
@@ -24,8 +27,8 @@ public class Graph {
 	}
 	
 	public void addEdge(Vertex v1, Vertex v2, int weight) {
-		if (!isWeighted){
-			weight = 0;	
+		if (!isWeighted) {
+			weight = 0;
 		}
 		v1.addEdge(v2, weight);
 		if(!this.isDirected) {
@@ -43,7 +46,7 @@ public class Graph {
 	public Vertex getVertexByValue(String value) {
 		//This is weird as well. Not sure what we should do if the vertex doesn't exist in the graph
 		for(Vertex v: this.vertices) { 
-			if (v.data == value) {
+			if (v.getData() == value) {
 				return v;
 			}
 		}
