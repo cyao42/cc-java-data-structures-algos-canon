@@ -1,1 +1,1 @@
-# cc-java-data-structures-algos-canon
+CC Java Data Structures and Algos Canon
