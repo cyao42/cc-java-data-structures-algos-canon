@@ -24,6 +24,9 @@ public class Graph {
 	}
 	
 	public void addEdge(Vertex v1, Vertex v2, int weight) {
+		if (!isWeighted){
+			weight = 0;	
+		}
 		v1.addEdge(v2, weight);
 		if(!this.isDirected) {
 			v2.addEdge(v1, weight);
@@ -54,7 +57,7 @@ public class Graph {
 	}
 	
 	public static void main(String[] args) {
-		Graph trainNetwork = new Graph(false, false);
+		Graph trainNetwork = new Graph(true, false);
 		Vertex atlantaStation = trainNetwork.addVertex("Atlanta");
 		Vertex denverStation = trainNetwork.addVertex("Denver");
 		Vertex newYorkStation = trainNetwork.addVertex("New York");
