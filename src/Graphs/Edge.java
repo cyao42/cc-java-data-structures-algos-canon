@@ -1,8 +1,8 @@
 
 public class Edge {
-	Vertex start;
-	Vertex end;
-	int weight;
+	private Vertex start;
+	private Vertex end;
+	private int weight;
 	
 	public Edge(Vertex startV, Vertex endV, int inputWeight) {
 		this.start = startV;
@@ -10,5 +10,16 @@ public class Edge {
 		this.weight = inputWeight;
 	}
 	
+	public Vertex getStart() {
+		return this.start;
+	}
+	
+	public Vertex getEnd() {
+		return this.end;
+	}
+	
+	public int getWeight() {
+		return this.weight;
+	}
 	
 }
