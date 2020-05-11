@@ -2,7 +2,7 @@
  * This class contains the code implementation for Bubble Sort. It takes in an array
  */
 
-package sort;
+package SortingAlgorithms;
 
 public class BubbleSort {
 

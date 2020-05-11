@@ -1,10 +1,14 @@
+package tests;
+
 import static org.junit.Assert.assertEquals;
+
+import LinearDataStructures.NodeDLL;
 import org.junit.Test;
 
 public class NodeDLLTest {
     @Test
     public void newNode() {
-        // Can successfully make a new Node
+        // Can successfully make a new linkedlist.Node
         NodeDLL node = new NodeDLL("first");
         String expectedData = "first";
         String actualData = node.data;
@@ -13,7 +17,7 @@ public class NodeDLLTest {
 
     @Test
     public void setNextNodeValid() {
-        // Can successfully set next Node
+        // Can successfully set next linkedlist.Node
         // Also successfully gets next node
         NodeDLL node1 = new NodeDLL("first");
         NodeDLL node2 = new NodeDLL("second");
@@ -25,7 +29,7 @@ public class NodeDLLTest {
 
     @Test
     public void setPrevNodeValid() {
-        // Can successfully set previous Node
+        // Can successfully set previous linkedlist.Node
         // Also successfully gets previous node
         NodeDLL node1 = new NodeDLL("first");
         NodeDLL node2 = new NodeDLL("second");

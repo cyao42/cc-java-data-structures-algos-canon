@@ -1,3 +1,5 @@
+package LinearDataStructures;
+
 public class DoublyLinkedList {
     
   public NodeDLL head;

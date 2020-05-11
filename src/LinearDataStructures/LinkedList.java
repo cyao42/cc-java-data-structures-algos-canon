@@ -1,3 +1,5 @@
+package LinearDataStructures;
+
 public class LinkedList {
 	
 	public Node head;

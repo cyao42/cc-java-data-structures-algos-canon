@@ -1,10 +1,14 @@
-import static org.junit.Assert.assertEquals;
+package tests;
+
+import LinearDataStructures.Node;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class NodeTest {
     @Test
     public void newNode() {
-        // Can successfully make a new Node
+        // Can successfully make a new linkedlist.Node
         Node node = new Node("first");
         String expectedData = "first";
         String actualData = node.data;
@@ -13,7 +17,7 @@ public class NodeTest {
 
      @Test
      public void setNextNodeValid() {
-         // Can successfully set next Node
+         // Can successfully set next linkedlist.Node
          // Also successfully gets next node
          Node node1 = new Node("first");
          Node node2 = new Node("second");

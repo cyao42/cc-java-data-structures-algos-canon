@@ -1,3 +1,7 @@
+package LinearDataStructures;
+
+import LinearDataStructures.LinkedList;
+
 public class Queue {
 
   public LinkedList queue;
@@ -31,7 +35,7 @@ public class Queue {
       this.size--;
       return data;
     } else {
-      throw new Error("Queue is empty!");
+      throw new Error("LinearDataStructures.Queue is empty!");
     }
   }
 
