@@ -1,7 +1,7 @@
 public class DoublyLinkedList {
     
-  NodeDLL head;
-  NodeDLL tail;
+  public NodeDLL head;
+  public NodeDLL tail;
 
   public DoublyLinkedList() {
     this.head = null;
