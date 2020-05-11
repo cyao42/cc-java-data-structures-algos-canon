@@ -1,3 +1,5 @@
+package LinearDataStructures;
+
 public class NodeDLL {
 
     public String data;

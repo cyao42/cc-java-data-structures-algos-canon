@@ -1,3 +1,5 @@
+package LinearDataStructures;
+
 public class Stack {
 
 	public LinkedList stack;
@@ -31,7 +33,7 @@ public class Stack {
       this.size--;
       return data;
     } else {
-      throw new Error("Stack is empty!");
+      throw new Error("LinearDataStructures.Stack is empty!");
     }
   }
 

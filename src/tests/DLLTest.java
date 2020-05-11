@@ -1,5 +1,9 @@
-import static org.junit.Assert.assertEquals;
+package tests;
+
+import LinearDataStructures.DoublyLinkedList;
+import LinearDataStructures.NodeDLL;
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class DLLTest {
     @Test
@@ -16,7 +20,7 @@ public class DLLTest {
     @Test
     public void addToHeadEmptyList() {
         // Can successfully add head of an empty list
-        // This also sets the tail to the new Node
+        // This also sets the tail to the new linkedlist.Node
         DoublyLinkedList list = new DoublyLinkedList();
         list.addToHead("head");
         assertEquals("Head of empty list not set properly", list.head.data, "head");
@@ -35,7 +39,7 @@ public class DLLTest {
     @Test
     public void addToTailEmptyList() {
         // Can successfully add tail of an empty list
-        // This also sets the head to the new Node
+        // This also sets the head to the new linkedlist.Node
         DoublyLinkedList list = new DoublyLinkedList();
         list.addToTail("tail");
         assertEquals("Tail of empty list not set properly", list.tail.data, "tail");

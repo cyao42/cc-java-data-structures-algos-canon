@@ -1,3 +1,5 @@
+package LinearDataStructures;
+
 public class Node {
 
     public String data;
