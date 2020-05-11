@@ -1,6 +1,9 @@
 /**
  * This class contains the code implementation for Bubble Sort. It takes in an array
  */
+
+package sort;
+
 public class BubbleSort {
 
     public int[] sort(int arr[]) {
