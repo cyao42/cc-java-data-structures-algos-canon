@@ -1,40 +1,22 @@
 /**
- * This class contains the code implementation for Bubble Sort. It takes in an array
+ * This class contains the code implementation for Bubble Sort.
  */
 
 package SortingAlgorithms;
+import static SortingAlgorithms.SortUtils.swap;
 
 public class BubbleSort {
-
     public int[] sort(int arr[]) {
-        int n = arr.length;
-        for (int i = 0; i < n-1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    // swap temp and arr[i]
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+        boolean swapping = true;
+        while (swapping) {
+            swapping = false;
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    swap(arr, i, i + 1);
+                    swapping = true;
                 }
             }
         }
         return arr;
-    }
-
-    public static void printArray(int arr[]) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-    }
-
-    public static void main(String args[]) {
-        BubbleSort bubble = new BubbleSort();
-        int unsorted[] = {64, 34, 25, 12, 22, 11, 90};
-        System.out.println("Unsorted array:");
-        printArray(unsorted);
-        int[] sorted = bubble.sort(unsorted);
-        System.out.println("Sorted array:");
-        printArray(sorted);
     }
 }
