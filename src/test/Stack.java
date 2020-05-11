@@ -31,7 +31,7 @@ public class Stack {
       this.size--;
       return data;
     } else {
-      throw new Error("Stack is empty.");
+      throw new Error("Stack is empty!");
     }
   }
 

@@ -64,5 +64,5 @@ public class QueueTest {
         assertEquals("Does not remove the head of the queue", q.queue.head.data, "second");
         assertEquals("Does not decrement the size of the queue", q.size, 1);
     }
-    
+
 }
