@@ -115,9 +115,6 @@ public class DLLTest {
         assertEquals("Does not remove head using .removeByData()", list.head.data, "second");
     }
 
-
-
-
     @Test
     public void removeByDataTail() {
         // Removes the tail using .removeByData()
