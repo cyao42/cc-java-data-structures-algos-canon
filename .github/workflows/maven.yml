@@ -7,7 +7,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master, caro-auto-test-maven ]
+    branches: [ master, carolyn-auto-test-maven ]
 
 jobs:
   build:
