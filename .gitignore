@@ -18,6 +18,8 @@
 *.zip
 *.tar.gz
 *.rar
+*.class
+*.DS_Store
 
 #IDE files
 .idea/
