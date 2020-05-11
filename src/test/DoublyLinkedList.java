@@ -33,7 +33,7 @@ public class DoublyLinkedList {
     }
     this.tail = newTail;
 
-    if (this.tail == null) {
+    if (this.head == null) {
       this.head = newTail;
     }
   }

@@ -64,4 +64,15 @@ public class LLTest {
         assertEquals("Head of list not removed", list.head.data, "first");
     }
 
+    @Test
+    public void testToString() {
+        // .toString() method correctly prints list
+        LinkedList list = new LinkedList();
+        list.addToHead("first");
+        list.addToHead("second");
+        String expected = "<head> second first <tail>";
+        String actual = list.toString();
+        assertEquals(".toString() method not printing correctly", expected, actual);
+    }
+
 }
