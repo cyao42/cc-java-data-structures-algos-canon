@@ -1,7 +1,7 @@
 public class DoublyLinkedList {
     
-  Node head;
-  Node tail;
+  NodeDLL head;
+  NodeDLL tail;
 
   public DoublyLinkedList() {
     this.head = null;
@@ -9,8 +9,8 @@ public class DoublyLinkedList {
   }
 
   public void addToHead(String data) {
-    Node newHead = new Node(data);
-    Node currentHead = this.head;
+    NodeDLL newHead = new NodeDLL(data);
+    NodeDLL currentHead = this.head;
 
     if (currentHead != null) {
       currentHead.setPreviousNode(newHead);
@@ -24,8 +24,8 @@ public class DoublyLinkedList {
   }
 
   public void addToTail(String data) {
-    Node newTail = new Node(data);
-    Node currentTail = this.tail;
+    NodeDLL newTail = new NodeDLL(data);
+    NodeDLL currentTail = this.tail;
 
     if (currentTail != null) {
       currentTail.setNextNode(newTail);
@@ -39,7 +39,7 @@ public class DoublyLinkedList {
   }
 
   public String removeHead() {
-    Node removedHead = this.head;
+    NodeDLL removedHead = this.head;
 
     if (removedHead == null) {
       return null;
@@ -56,7 +56,7 @@ public class DoublyLinkedList {
   }
 
   public String removeTail() {
-    Node removedTail = this.tail;
+    NodeDLL removedTail = this.tail;
 
     if (removedTail == null) {
       return null;
@@ -72,10 +72,10 @@ public class DoublyLinkedList {
     return removedTail.data;
   }
 
-  public Node removeByData(String data) {
+  public NodeDLL removeByData(String data) {
 
-    Node nodeToRemove = null;
-    Node currentNode = this.head;
+    NodeDLL nodeToRemove = null;
+    NodeDLL currentNode = this.head;
 
     while (currentNode != null) {
       if (currentNode.data == data) {
@@ -93,8 +93,8 @@ public class DoublyLinkedList {
     } else if (nodeToRemove == this.tail) {
       this.removeTail();
     } else {
-      Node nextNode = nodeToRemove.getNextNode();
-      Node previousNode = nodeToRemove.getPreviousNode();
+      NodeDLL nextNode = nodeToRemove.getNextNode();
+      NodeDLL previousNode = nodeToRemove.getPreviousNode();
       nextNode.setPreviousNode(previousNode);
       previousNode.setNextNode(nextNode);
     }
@@ -102,7 +102,7 @@ public class DoublyLinkedList {
   }
 
   public String toString() {
-    Node currentNode = this.head;
+    NodeDLL currentNode = this.head;
     String output = "<head> ";
     while (currentNode != null) {
       output += currentNode.data + " ";
