@@ -1,6 +1,7 @@
 package tests;
 
 import SortingAlgorithms.BubbleSort;
+
 import static org.junit.Assert.*;
 
 public class BubbleSortTest {
