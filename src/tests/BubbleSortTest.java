@@ -13,5 +13,15 @@ public class BubbleSortTest {
 
         int[] bubbleSorted = bs.sort(testArray);
         assertArrayEquals("The sort did not return the expected result", testArraySorted, bubbleSorted);
+
+        int[] testArrayOneElement = {32};
+        int[] testArrayOneElementSorted = {32};
+        int[] bubbleSortedOneElement = bs.sort(testArrayOneElement);
+        assertArrayEquals("The sort did not return the expected result", testArrayOneElementSorted, bubbleSortedOneElement);
+
+        int[] testArrayBlank = {};
+        int[] testArrayBlankSorted = {};
+        int[] bubbleSortedBlank = bs.sort(testArrayBlank);
+        assertArrayEquals("The sort did not return the expected result", testArrayBlankSorted, bubbleSortedBlank);
     }
 }
