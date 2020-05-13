@@ -29,7 +29,7 @@ public class MinHeap {
         return min;
     }
 
-    private void bubbleUp() {
+    public void bubbleUp() {
         int current = this.size;
         while (current > 1 && this.heap.get(this.getParent(current)) > this.heap.get(current)) {
             this.swap(current, this.getParent(current));
@@ -57,7 +57,7 @@ public class MinHeap {
         }
     }
 
-    private void swap(int a, int b) {
+    public void swap(int a, int b) {
         int temp = this.heap.get(b);
         this.heap.set(b, this.heap.get(a));
         this.heap.set(a, temp);
