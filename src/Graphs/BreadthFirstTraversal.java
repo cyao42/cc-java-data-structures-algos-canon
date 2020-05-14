@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 
-public class BFS {
+public class BreadthFirstTraversal {
 
 
     public static void breadthFirstTraversal(Vertex start) {
@@ -28,7 +28,7 @@ public class BFS {
 
 
     public static void main(String[] args) {
-        Graph graph = new Graph(false, false);
+        Graph graph = new Graph(false, true);
         Vertex a = graph.addVertex("a");
         Vertex b = graph.addVertex("b");
         Vertex c = graph.addVertex("c");
@@ -44,6 +44,13 @@ public class BFS {
         graph.addEdge(d, e, 0);
         graph.addEdge(e, f, 0);
         graph.addEdge(f, e, 0);
+
+        System.out.println("Breadth");
         breadthFirstTraversal(a);
+        System.out.println("Depth");
+        ArrayList<Vertex> starting = new ArrayList<Vertex>();
+        starting.add(a);
+        DepthFirstSearch.depthFirstTraversal(a, starting);
+
     }
 }

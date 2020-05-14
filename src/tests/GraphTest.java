@@ -3,11 +3,7 @@ package tests;
 import static org.junit.Assert.assertEquals;
 
 import Graphs.Vertex;
-import SortingAlgorithms.BubbleSort;
 import Graphs.Graph;
-import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 class GraphTest {
 
