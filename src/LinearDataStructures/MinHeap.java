@@ -37,7 +37,7 @@ public class MinHeap {
         }
     }
 
-    private void heapify() {
+    public void heapify() {
         int current = 1;
         int leftChild = this.getLeft(current);
         int rightChild = this.getRight(current);
@@ -63,7 +63,7 @@ public class MinHeap {
         this.heap.set(a, temp);
     }
 
-    private boolean exists(int index) {
+    public boolean exists(int index) {
         return index <= this.size;
     }
 
