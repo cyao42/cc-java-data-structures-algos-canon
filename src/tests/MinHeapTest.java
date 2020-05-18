@@ -157,6 +157,13 @@ public class MinHeapTest {
         int num2 = h.heap.get(3);
         assertEquals("Swap not done correctly", num1, 18);
         assertEquals("Swap not done correctly", num2, 9);
+
+        // No change when swapping elements at the same index
+        h.swap(2, 2);
+        int num3 = h.heap.get(2);
+        assertEquals("Swap not done correctly", 21, num3);
+        assertEquals("Swap not done correctly", num1, 18);
+        assertEquals("Swap not done correctly", num2, 9);
     }
 
     @Test
