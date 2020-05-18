@@ -96,7 +96,7 @@ public class MinHeapTest {
     }
 
     @Test
-    public void heapifyValid() { 
+    public void heapifyValid() {
         // Correctly reorders heaps of over 3 elements after removing the min
         MinHeap testHeap = new MinHeap();
         testHeap.add(9);
