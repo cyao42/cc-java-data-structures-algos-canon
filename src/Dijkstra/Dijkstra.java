@@ -5,10 +5,7 @@ import Graphs.Graph;
 import Graphs.Edge;
 
 
-import java.util.Dictionary;
-import java.util.Enumeration;
-import java.util.Hashtable;
-import java.util.PriorityQueue;
+import java.util.*;
 
 
 public class Dijkstra {
@@ -42,6 +39,26 @@ public class Dijkstra {
         }
 
         return new Dictionary[]{distances, previous};
+    }
+
+    public static void shortestPathBetween(Graph g, Vertex startingVertex, Vertex targetVertex){
+        Dictionary[] dijkstraDicts = dijkstra(g, startingVertex);
+        Dictionary distances = dijkstraDicts[0];
+        Dictionary previous = dijkstraDicts[1];
+        Integer distance = (Integer) distances.get(targetVertex.getData());
+        System.out.println("Shortest Distance between " + startingVertex.getData() + " and " + targetVertex.getData());
+        System.out.println(distance);
+
+        ArrayList<Vertex> path = new ArrayList<>();
+        Vertex v = targetVertex;
+        while(v.getData() != "Null"){
+            path.add(0,v);
+            v = (Vertex) previous.get(v.getData());
+        }
+        System.out.println("Shortest Path");
+        for (Vertex pathVertex: path){
+            System.out.println(pathVertex.getData());
+        }
     }
 
     public static void dijkstraResultPrinter(Dictionary[] d){
@@ -80,6 +97,6 @@ public class Dijkstra {
         testGraph.addEdge(e, g, -50);
 
         dijkstraResultPrinter(dijkstra(testGraph, a));
-
+        shortestPathBetween(testGraph, a, g);
     }
 }
