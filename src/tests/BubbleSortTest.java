@@ -1,6 +1,6 @@
 package tests;
 
-import SortingAlgorithms.BubbleSort;
+import SortingAlgorithms.BubbleSort.BubbleSort;
 
 import static org.junit.Assert.assertArrayEquals;
 

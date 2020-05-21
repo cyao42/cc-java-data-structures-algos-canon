@@ -1,6 +1,6 @@
 package tests;
 
-import Trees.BinarySearchTree;
+import NonlinearDataStructures.SearchingTrees.BinarySearchTree;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

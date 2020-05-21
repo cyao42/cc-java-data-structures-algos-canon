@@ -1,4 +1,4 @@
-package LinearDataStructures;
+package LinearDataStructures.DoublyLinkedLists;
 
 public class NodeDLL {
 

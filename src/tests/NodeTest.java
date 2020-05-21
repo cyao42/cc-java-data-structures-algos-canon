@@ -1,6 +1,6 @@
 package tests;
 
-import LinearDataStructures.Node;
+import LinearDataStructures.Nodes.Node;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

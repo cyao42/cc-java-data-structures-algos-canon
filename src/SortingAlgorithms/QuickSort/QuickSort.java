@@ -1,4 +1,4 @@
-package SortingAlgorithms;
+package SortingAlgorithms.QuickSort;
 
 import static SortingAlgorithms.SortUtils.swap;
 

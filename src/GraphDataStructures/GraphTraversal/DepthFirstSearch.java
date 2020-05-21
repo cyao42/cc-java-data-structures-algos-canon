@@ -1,5 +1,7 @@
-package Graphs;
-import java.lang.reflect.Array;
+package GraphDataStructures.GraphTraversal;
+import GraphDataStructures.Graphs.Edge;
+import GraphDataStructures.Graphs.Vertex;
+
 import java.util.ArrayList;
 
 

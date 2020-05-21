@@ -1,4 +1,4 @@
-package Trees;
+package NonlinearDataStructures.Trees;
 
 import java.util.ArrayList;
 import java.util.Queue;

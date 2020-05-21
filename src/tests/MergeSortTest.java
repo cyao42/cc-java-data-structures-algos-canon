@@ -1,6 +1,6 @@
 package tests;
 
-import SortingAlgorithms.MergeSort;
+import SortingAlgorithms.MergeSort.MergeSort;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

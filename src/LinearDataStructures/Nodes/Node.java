@@ -1,4 +1,4 @@
-package LinearDataStructures;
+package LinearDataStructures.Nodes;
 
 public class Node {
 

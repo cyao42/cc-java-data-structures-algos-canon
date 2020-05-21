@@ -1,4 +1,4 @@
-package Trees;
+package NonlinearDataStructures.SearchingTrees;
 
 import java.util.LinkedList;
 import java.util.Queue;
