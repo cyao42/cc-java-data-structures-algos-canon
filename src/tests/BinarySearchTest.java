@@ -1,6 +1,6 @@
 package tests;
 
-import SearchAlgorithms.BinarySearch;
+import LinearDataStructures.SearchingArrays.BinarySearch;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
