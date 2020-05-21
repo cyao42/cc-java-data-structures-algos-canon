@@ -1,9 +1,8 @@
-package Dijkstra;
+package GraphDataStructures.Dijkstra;
 
-import Graphs.Vertex;
-import Graphs.Graph;
-import Graphs.Edge;
-
+import GraphDataStructures.Graphs.Edge;
+import GraphDataStructures.Graphs.Graph;
+import GraphDataStructures.Graphs.Vertex;
 
 import java.util.*;
 

@@ -1,4 +1,5 @@
-package Dijkstra;
+package GraphDataStructures.Dijkstra;
+import GraphDataStructures.Graphs.Vertex;
 import Graphs.Vertex;
 
 
