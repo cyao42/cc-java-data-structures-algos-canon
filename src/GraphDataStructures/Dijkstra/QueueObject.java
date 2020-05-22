@@ -1,6 +1,5 @@
 package GraphDataStructures.Dijkstra;
 import GraphDataStructures.Graphs.Vertex;
-import Graphs.Vertex;
 
 
 public class QueueObject implements Comparable<QueueObject> {
