@@ -1,13 +1,13 @@
-package LinearDataStructures;
+package LinearDataStructures.HashMap;
 
 public class HashMap {
 
-    public LinkedListHashMap[] hashmap;
+    public LinkedList[] hashmap;
 
     public HashMap(int size) {
-        this.hashmap = new LinkedListHashMap[size];
+        this.hashmap = new LinkedList[size];
         for (int i = 0; i < size; i++) {
-            this.hashmap[i] = new LinkedListHashMap();
+            this.hashmap[i] = new LinkedList();
         }
     }
 
@@ -22,18 +22,18 @@ public class HashMap {
 
     public void assign(String key, String value) {
         int arrayIndex = this.hash(key);
-        LinkedListHashMap list = this.hashmap[arrayIndex];
+        LinkedList list = this.hashmap[arrayIndex];
         if (list.head == null) {
             list.addToHead(key, value);
             return;
         }
-        NodeHashMap current = list.head;
+        Node current = list.head;
         while (current != null) {
             if (current.key == key) {
                 current.setKeyValue(key, value);
             }
             if (current.getNextNode() == null) {
-                current.setNextNode(new NodeHashMap(key, value));
+                current.setNextNode(new Node(key, value));
                 break;
             }
             current = current.getNextNode();
@@ -42,7 +42,7 @@ public class HashMap {
 
     public String retrieve(String key) {
         int arrayIndex = this.hash(key);
-        NodeHashMap current = this.hashmap[arrayIndex].head;
+        Node current = this.hashmap[arrayIndex].head;
         while (current != null) {
             if (current.key == key) {
                 return current.value;

@@ -1,8 +1,6 @@
 package tests;
 
-import LinearDataStructures.HashMap;
-import LinearDataStructures.LinkedListHashMap;
-import LinearDataStructures.NodeHashMap;
+import LinearDataStructures.HashMap.HashMap;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

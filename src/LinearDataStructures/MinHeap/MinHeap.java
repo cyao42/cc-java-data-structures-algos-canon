@@ -1,7 +1,7 @@
  /*NOTE: many methods were made public (heapify, bubbleUp, the helper methods)
  for testing - they should be private when in the LE */
 
-package LinearDataStructures;
+package LinearDataStructures.MinHeap;
 import java.util.ArrayList;
 
 public class MinHeap {

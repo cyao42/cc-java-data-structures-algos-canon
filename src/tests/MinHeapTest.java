@@ -1,8 +1,7 @@
 package tests;
 
-import LinearDataStructures.MinHeap;
+import LinearDataStructures.MinHeap.MinHeap;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import org.junit.Test;
 

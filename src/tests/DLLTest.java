@@ -1,7 +1,7 @@
 package tests;
 
 import LinearDataStructures.DoublyLinkedLists.DoublyLinkedList;
-import LinearDataStructures.DoublyLinkedLists.NodeDLL;
+import LinearDataStructures.DoublyLinkedLists.Node;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -11,9 +11,9 @@ public class DLLTest {
         // Successfully sets head to null
         // Also successfully sets tail to null
         DoublyLinkedList list = new DoublyLinkedList();
-        NodeDLL actualNodeHead = list.head;
+        Node actualNodeHead = list.head;
         assertEquals("Head not initialized properly", null, actualNodeHead);
-        NodeDLL actualNodeTail = list.tail;
+        Node actualNodeTail = list.tail;
         assertEquals("Tail not initialized properly", null, actualNodeTail);
     }
 

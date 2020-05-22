@@ -2,8 +2,8 @@ package LinearDataStructures.DoublyLinkedLists;
 
 public class DoublyLinkedList {
     
-  public NodeDLL head;
-  public NodeDLL tail;
+  public Node head;
+  public Node tail;
 
   public DoublyLinkedList() {
     this.head = null;
@@ -11,8 +11,8 @@ public class DoublyLinkedList {
   }
 
   public void addToHead(String data) {
-    NodeDLL newHead = new NodeDLL(data);
-    NodeDLL currentHead = this.head;
+    Node newHead = new Node(data);
+    Node currentHead = this.head;
 
     if (currentHead != null) {
       currentHead.setPreviousNode(newHead);
@@ -26,8 +26,8 @@ public class DoublyLinkedList {
   }
 
   public void addToTail(String data) {
-    NodeDLL newTail = new NodeDLL(data);
-    NodeDLL currentTail = this.tail;
+    Node newTail = new Node(data);
+    Node currentTail = this.tail;
 
     if (currentTail != null) {
       currentTail.setNextNode(newTail);
@@ -41,7 +41,7 @@ public class DoublyLinkedList {
   }
 
   public String removeHead() {
-    NodeDLL removedHead = this.head;
+    Node removedHead = this.head;
 
     if (removedHead == null) {
       return null;
@@ -58,7 +58,7 @@ public class DoublyLinkedList {
   }
 
   public String removeTail() {
-    NodeDLL removedTail = this.tail;
+    Node removedTail = this.tail;
 
     if (removedTail == null) {
       return null;
@@ -74,10 +74,10 @@ public class DoublyLinkedList {
     return removedTail.data;
   }
 
-  public NodeDLL removeByData(String data) {
+  public Node removeByData(String data) {
 
-    NodeDLL nodeToRemove = null;
-    NodeDLL currentNode = this.head;
+    Node nodeToRemove = null;
+    Node currentNode = this.head;
 
     while (currentNode != null) {
       if (currentNode.data == data) {
@@ -95,8 +95,8 @@ public class DoublyLinkedList {
     } else if (nodeToRemove == this.tail) {
       this.removeTail();
     } else {
-      NodeDLL nextNode = nodeToRemove.getNextNode();
-      NodeDLL previousNode = nodeToRemove.getPreviousNode();
+      Node nextNode = nodeToRemove.getNextNode();
+      Node previousNode = nodeToRemove.getPreviousNode();
       nextNode.setPreviousNode(previousNode);
       previousNode.setNextNode(nextNode);
     }
@@ -104,7 +104,7 @@ public class DoublyLinkedList {
   }
 
   public String toString() {
-    NodeDLL currentNode = this.head;
+    Node currentNode = this.head;
     String output = "<head> ";
     while (currentNode != null) {
       output += currentNode.data + " ";

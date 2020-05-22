@@ -1,21 +1,21 @@
-package LinearDataStructures;
+package LinearDataStructures.HashMap;
 
-public class NodeHashMap {
+public class Node {
     public String key;
     public String value;
-    private NodeHashMap next;
+    private Node next;
 
-    public NodeHashMap(String key, String value) {
+    public Node(String key, String value) {
         this.key  = key;
         this.value = value;
         this.next = null;
     }
 
-    public void setNextNode(NodeHashMap node) {
+    public void setNextNode(Node node) {
         this.next = node;
     }
 
-    public NodeHashMap getNextNode() {
+    public Node getNextNode() {
         return this.next;
     }
 
