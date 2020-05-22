@@ -1,6 +1,6 @@
 package tests;
 
-import SortingAlgorithms.QuickSort;
+import SortingAlgorithms.QuickSort.QuickSort;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

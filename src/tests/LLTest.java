@@ -1,7 +1,7 @@
 package tests;
 
-import LinearDataStructures.LinkedList;
-import LinearDataStructures.Node;
+import LinearDataStructures.SinglyLinkedLists.LinkedList;
+import LinearDataStructures.Nodes.Node;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

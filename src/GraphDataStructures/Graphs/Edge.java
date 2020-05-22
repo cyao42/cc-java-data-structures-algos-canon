@@ -1,4 +1,4 @@
-package Graphs;
+package GraphDataStructures.Graphs;
 
 public class Edge {
 	private Vertex start;

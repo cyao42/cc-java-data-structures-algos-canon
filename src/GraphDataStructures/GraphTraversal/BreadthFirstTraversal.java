@@ -1,4 +1,8 @@
-package Graphs;
+package GraphDataStructures.GraphTraversal;
+import GraphDataStructures.Graphs.Edge;
+import GraphDataStructures.Graphs.Graph;
+import GraphDataStructures.Graphs.Vertex;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;

@@ -2,8 +2,8 @@ package tests;
 
 import static org.junit.Assert.assertEquals;
 
-import Graphs.Vertex;
-import Graphs.Graph;
+import GraphDataStructures.Graphs.Vertex;
+import GraphDataStructures.Graphs.Graph;
 import org.junit.jupiter.api.Test;
 class GraphTest {
 

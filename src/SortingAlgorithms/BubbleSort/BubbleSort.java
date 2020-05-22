@@ -2,7 +2,7 @@
  * This class contains the code implementation for Bubble Sort.
  */
 
-package SortingAlgorithms;
+package SortingAlgorithms.BubbleSort;
 import static SortingAlgorithms.SortUtils.swap;
 
 public class BubbleSort {

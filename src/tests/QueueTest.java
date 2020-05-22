@@ -1,6 +1,6 @@
 package tests;
 
-import LinearDataStructures.Queue;
+import LinearDataStructures.Queues.Queue;
 import org.junit.Assert;
 import org.junit.Test;
 

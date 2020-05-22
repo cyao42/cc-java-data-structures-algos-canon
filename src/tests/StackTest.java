@@ -1,6 +1,6 @@
 package tests;
 
-import LinearDataStructures.Stack;
+import LinearDataStructures.Stacks.Stack;
 import org.junit.Assert;
 import org.junit.Test;
 
