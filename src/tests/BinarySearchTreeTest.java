@@ -50,6 +50,12 @@ public class BinarySearchTreeTest {
     public void getNodeByValue() {
         BinarySearchTree testTree = new BinarySearchTree(5);
         testTree.insert(100);
+        testTree.insert(4);
+        testTree.insert(25);
+        testTree.insert(90);
+        testTree.insert(15);
+        testTree.insert(100);
+        testTree.insert(90);
         BinarySearchTree result = testTree.getNodeByValue(100);
         assertNotNull(
                 "Get node by value fails to retrieve node",
@@ -57,7 +63,24 @@ public class BinarySearchTreeTest {
         );
         assertTrue(result instanceof BinarySearchTree);
 
-        result = testTree.getNodeByValue(25);
+        result = testTree.getNodeByValue(90);
+        BinarySearchTree expected = new BinarySearchTree(90);
+        assertNotNull(
+                "Get node by value fails to retrieve node",
+                result
+        );
+        assertTrue(
+                "Get node by value fails to get the correct node deeper in the tree",
+                result instanceof BinarySearchTree && result.getValue() == 90
+        );
+        int expectedDepth = 4;
+        assertEquals(
+                "Get node by value does not return the first matching instance",
+                expectedDepth,
+                result.getDepth()
+        );
+
+        result = testTree.getNodeByValue(45);
         assertNull(
                 "Get node by value failed to return null if tree not present",
                 result
@@ -66,9 +89,29 @@ public class BinarySearchTreeTest {
 
     @Test
     public void depthFirstTraversal() {
+        BinarySearchTree testTree = new BinarySearchTree(5);
+        testTree.insert(100);
+        testTree.insert(4);
+        testTree.insert(25);
+        testTree.insert(90);
+        testTree.insert(15);
+        testTree.insert(100);
+        testTree.insert(90);
+        System.out.println("DFS in order traversal");
+        testTree.depthFirstTraversal();
     }
 
     @Test
     public void breadthFirstTraversal() {
+        BinarySearchTree testTree = new BinarySearchTree(5);
+        testTree.insert(100);
+        testTree.insert(4);
+        testTree.insert(25);
+        testTree.insert(90);
+        testTree.insert(15);
+        testTree.insert(100);
+        testTree.insert(90);
+        System.out.println("BFS traversal");
+        testTree.breadthFirstTraversal();
     }
 }
