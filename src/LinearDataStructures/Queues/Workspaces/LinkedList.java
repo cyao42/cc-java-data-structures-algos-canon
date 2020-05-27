@@ -1,6 +1,6 @@
-//package LinearDataStructures.SinglyLinkedLists;
+package LinearDataStructures.SinglyLinkedLists;
 
-//import Node;
+import Node;
 
 public class LinkedList {
 
