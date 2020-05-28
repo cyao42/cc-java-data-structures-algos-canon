@@ -37,7 +37,7 @@ public class Queue {
         System.out.println("Blending the smoothies...");
         smoothieOrders.dequeue();
         smoothieOrders.dequeue();
-        System.out.println("All orders are complete! No one is in line.");
+        System.out.println("All orders are complete!");
      */
     }
 }
