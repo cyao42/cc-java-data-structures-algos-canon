@@ -44,6 +44,11 @@ public class BinarySearchTree {
         return this.getNodeByValue(value) != null;
     }
 
+    /**
+     * Insert a node based on the rule that the left child of a parent should always be <= parent's data and right child
+     * should always be >= parent's data. Will instantiate nodes with the correct depths as well.
+     * @param value
+     */
     public void insert(int value) {
         if (value < this.value) {
             if (this.left == null) {
@@ -60,6 +65,11 @@ public class BinarySearchTree {
         }
     }
 
+    /**
+     * Gets a binary search tree node with the value
+     * @param value The value to search for in the tree
+     * @return a binary search tree or null
+     */
     public BinarySearchTree getNodeByValue(int value) {
         if (this.value == value) {
             return this;
@@ -74,6 +84,10 @@ public class BinarySearchTree {
         }
     }
 
+    /**
+     * Performs inorder DFS traversal: left-root-right
+     * The data printed should be sorted
+     */
     public void depthFirstTraversal() {
         if (this.left != null) {
             this.left.depthFirstTraversal();
@@ -84,17 +98,26 @@ public class BinarySearchTree {
         }
     }
 
+    /**
+     * Performs BFS traversal
+     * Will print the current depth/level and the data
+     */
     public void breadthFirstTraversal() {
         Queue<BinarySearchTree> queue = new LinkedList<>();
         BinarySearchTree current = this;
+        int currentDepth = 0;
         queue.add(current);
         while (!queue.isEmpty()) {
             current = queue.poll();
+            if (current.depth > currentDepth) {
+                currentDepth = current.depth;
+                System.out.println("Current depth: " + currentDepth);
+            }
             System.out.println(current.value);
-            if (this.left != null) {
+            if (current.left != null) {
                 queue.add(current.left);
             }
-            if (this.right != null) {
+            if (current.right != null) {
                 queue.add(current.right);
             }
         }

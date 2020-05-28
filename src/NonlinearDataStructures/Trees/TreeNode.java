@@ -30,17 +30,6 @@ public class TreeNode {
         this.children.remove(child);
     }
 
-    /*
-      print(level = 0) {
-    let result = '';
-    for (let i = 0; i < level; i++) {
-      result += '-- ';
-    }
-    console.log(`${result}${this.data}`);
-    this.children.forEach(child => child.print(level + 1));
-  }
-     */
-
     public void depthFirstTraversal() {
         System.out.println(this.data);
         for (TreeNode child : this.children) {
@@ -49,6 +38,7 @@ public class TreeNode {
     }
 
     public void breadthFirstTraversal() {
+        System.out.println("Breadth first search:");
         Queue<TreeNode> queue = new LinkedList<>();
         TreeNode current = this;
         queue.add(current);
