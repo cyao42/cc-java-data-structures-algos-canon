@@ -36,6 +36,10 @@ public class Queue {
         return data;
     }
     
+    public String peek() {
+        return this.queue.head.data;
+    }
+    
     public static void main(String[] args) {
         Queue smoothieOrders = new Queue();
         smoothieOrders.enqueue("strawberry banana");
