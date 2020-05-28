@@ -1,4 +1,4 @@
-class Queue {
+public class Queue {
 
     public LinkedList queue;
     public int size;
