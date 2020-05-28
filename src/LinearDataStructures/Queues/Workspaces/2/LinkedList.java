@@ -1,5 +1,3 @@
-package LinearDataStructures.SinglyLinkedLists;
-
 import Node;
 
 public class LinkedList {
