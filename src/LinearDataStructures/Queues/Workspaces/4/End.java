@@ -26,7 +26,7 @@ public class Queue {
     public void enqueue(String data) {
         this.queue.addToTail(data);
         this.size++;
-        System.out.println("Added " + data + "! Queue size is now " + this.size);
+        System.out.println("Added " + data + "! Queue size is now " + this.size + ".");
     }
     
     public static void main(String[] args) {
