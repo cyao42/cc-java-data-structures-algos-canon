@@ -13,7 +13,7 @@ public class Graph {
 		this.isDirected = inputIsDirected;
 	}
 	
-	public ArrayList<Vertex> getVertices(){
+	public ArrayList<Vertex> getVertices() {
 		return this.vertices;
 	}
 	
@@ -27,9 +27,9 @@ public class Graph {
 		this.vertices.remove(v);
 	}
 	
-	public void addEdge(Vertex v1, Vertex v2, int weight) {
+	public void addEdge(Vertex v1, Vertex v2, Integer weight) {
 		if (!isWeighted) {
-			weight = 0;
+			weight = null;
 		}
 		v1.addEdge(v2, weight);
 		if(!this.isDirected) {
@@ -56,7 +56,7 @@ public class Graph {
 	
 	public void print() {
 		for(Vertex v: this.vertices) {
-			v.print();
+			v.print(isWeighted);
 		}
 	}
 	
