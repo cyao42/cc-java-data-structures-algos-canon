@@ -1,5 +1,5 @@
 public class Queue {
-
+    
     public LinkedList queue;
     public int size;
     static final int DEFAULT_MAX_SIZE = Integer.MAX_VALUE;
@@ -41,7 +41,12 @@ public class Queue {
     }
     
     public String peek() {
-        return this.queue.head.data;
+        if (this.isEmpty()) {
+            return null;
+        } else {
+            return this.queue.head.data;
+        }
+
     }
     
     public static void main(String[] args) {
