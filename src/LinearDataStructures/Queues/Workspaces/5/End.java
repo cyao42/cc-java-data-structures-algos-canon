@@ -15,6 +15,14 @@ public class Queue {
         this.maxSize = maxSize;
     }
     
+    public boolean hasSpace() {
+        return this.size < this.maxSize;
+    }
+    
+    public boolean isEmpty() {
+        return this.size == 0;
+    }
+    
     public void enqueue(String data) {
         this.queue.addToTail(data);
         this.size++;
@@ -30,14 +38,6 @@ public class Queue {
     
     public String peek() {
         return this.queue.head.data;
-    }
-    
-    public boolean hasSpace() {
-        return this.size < this.maxSize;
-    }
-    
-    public boolean isEmpty() {
-        return this.size == 0;
     }
     
     public static void main(String[] args) {
