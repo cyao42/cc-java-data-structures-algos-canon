@@ -1,4 +1,4 @@
-package GraphDataStructures.Graphs.workspace.exercise_1.end;
+package GraphDataStructures.Graphs.workspace.exercise_5.end;
 
 import java.util.ArrayList;
 
@@ -9,6 +9,14 @@ public class Vertex {
 	public Vertex(String inputData) {
 		this.data = inputData;
 		this.edges = new ArrayList<Edge>();
+	}
+
+	public void addEdge(Vertex endVertex) {
+		this.edges.add(new Edge(this, endVertex, null));
+	}
+
+	public void removeEdge(Vertex endVertex) {
+		this.edges.removeIf(edge -> edge.getEnd().equals(endVertex));
 	}
 
 	public String getData() {

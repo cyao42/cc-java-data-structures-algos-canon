@@ -1,4 +1,4 @@
-package GraphDataStructures.Graphs.workspace.exercise_1.end;
+package GraphDataStructures.Graphs.workspace.exercise_2.start;
 
 import java.util.ArrayList;
 

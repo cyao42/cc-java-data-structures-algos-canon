@@ -7,7 +7,7 @@ public class Vertex {
 	private ArrayList<Edge> edges;
 
 	public Vertex() {
-		
+
 	}
 
 	public String getData() {

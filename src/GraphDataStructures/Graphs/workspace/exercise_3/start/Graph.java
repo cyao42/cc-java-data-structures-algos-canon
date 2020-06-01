@@ -1,4 +1,4 @@
-package GraphDataStructures.Graphs.workspace.exercise_1.end;
+package GraphDataStructures.Graphs.workspace.exercise_3.start;
 
 import java.util.ArrayList;
 
@@ -9,6 +9,13 @@ public class Graph {
 
 	public Graph() {
 		this.vertices = new ArrayList<Vertex>();
+	}
+
+	public Vertex addVertex(String data) {
+		Vertex newVertex = new Vertex(data);
+		this.vertices.add(newVertex);
+
+		return newVertex;
 	}
 
 	public ArrayList<Vertex> getVertices() {
@@ -32,6 +39,10 @@ public class Graph {
 	}
 	
 	public static void main(String[] args) {
-		
+		Graph trainNetwork = new Graph();
+		Vertex atlantaStation = trainNetwork.addVertex("Atlanta");
+		Vertex newYorkStation = trainNetwork.addVertex("New York");
+
+		trainNetwork.print();
 	}
 }
