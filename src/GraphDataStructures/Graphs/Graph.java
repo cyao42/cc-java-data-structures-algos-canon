@@ -51,7 +51,8 @@ public class Graph {
 				return v;
 			}
 		}
-		return new Vertex("");
+
+		return null;
 	}
 	
 	public void print() {
