@@ -17,12 +17,11 @@ public class Queue {
     
     public static void main(String[] args) {
     /*
-      Queue queueOne = new Queue(25);
-      Queue queueTwo = new Queue(0);
-      System.out.println("queueOne has space for more nodes: " + queueOne.hasSpace());
-      System.out.println("queueTwo has space for more nodes: " + queueTwo.hasSpace());
-      System.out.println("queueOne is empty: " + queueOne.isEmpty());
-      System.out.println("queueTwo is empty: " + queueTwo.isEmpty());
+      Queue coffeeOrder = new Queue();
+      System.out.println("coffeeOrder queue has " + coffeeOrder.size + " orders.");
+      coffeeOrder.enqueue("latte");
+      coffeeOrder.enqueue("espresso");
+      coffeeOrder.enqueue("cappuccino");
     */
     }
 }

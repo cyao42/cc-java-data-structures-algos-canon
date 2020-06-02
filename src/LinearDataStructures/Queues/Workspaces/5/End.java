@@ -1,5 +1,5 @@
 public class Queue {
-
+    
     public LinkedList queue;
     public int size;
     static final int DEFAULT_MAX_SIZE = Integer.MAX_VALUE;
@@ -41,12 +41,11 @@ public class Queue {
     }
     
     public static void main(String[] args) {
-        Queue smoothieOrders = new Queue();
-        smoothieOrders.enqueue("strawberry banana");
-        smoothieOrders.enqueue("chocolate peanut butter");
-        System.out.println("Blending the smoothies...");
-        smoothieOrders.dequeue();
-        smoothieOrders.dequeue();
-        System.out.println("All orders are complete!");
+      Queue queueOne = new Queue(25);
+      Queue queueTwo = new Queue(0);
+      System.out.println("queueOne has space for more nodes: " + queueOne.hasSpace());
+      System.out.println("queueTwo has space for more nodes: " + queueTwo.hasSpace());
+      System.out.println("queueOne is empty: " + queueOne.isEmpty());
+      System.out.println("queueTwo is empty: " + queueTwo.isEmpty());
     }
 }

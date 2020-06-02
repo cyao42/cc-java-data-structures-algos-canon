@@ -1,5 +1,5 @@
 public class Queue {
-    
+
     public LinkedList queue;
     public int size;
     static final int DEFAULT_MAX_SIZE = Integer.MAX_VALUE;
@@ -24,16 +24,18 @@ public class Queue {
     }
     
     public void enqueue(String data) {
-        this.queue.addToTail(data);
-        this.size++;
-        System.out.println("Added " + data + "! Queue size is now " + this.size);
+        if (this.hasSpace()) {
+            this.queue.addToTail(data);
+            this.size++;
+        } else {
+            throw new Error("Queue is full!");
+        }
     }
     
     public String dequeue() {
         if (!this.isEmpty()) {
             String data = this.queue.removeHead();
             this.size--;
-            System.out.println("Removed " + data + "! Queue size is now " + this.size + ".");
             return data;
         } else {
             throw new Error("Queue is empty!");
@@ -46,13 +48,5 @@ public class Queue {
         } else {
             return this.queue.head.data;
         }
-
-    }
-    
-    public static void main(String[] args) {
-        Queue boundedQueue = new Queue(3);
-        boundedQueue.enqueue("one");
-        boundedQueue.enqueue("two");
-        boundedQueue.enqueue("three");
     }
 }
