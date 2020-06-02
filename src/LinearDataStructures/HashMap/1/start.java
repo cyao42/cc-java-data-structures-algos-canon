@@ -8,4 +8,7 @@ public class HashMap {
           this.hashmap = new String[size];
     }
 
+    static public void main(String[] args) {
+
+    }
 }

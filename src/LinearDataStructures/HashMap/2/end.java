@@ -16,4 +16,10 @@ public class HashMap {
         return hashCode;
     }
 
+    static public void main(String[] args) {
+        HashMap newHashMap = new HashMap(3);
+        System.out.println(newHashMap.hash("c"));
+        System.out.println(newHashMap.hash("ca"));
+        System.out.println(newHashMap.hash("car"));  
+    }
 }
