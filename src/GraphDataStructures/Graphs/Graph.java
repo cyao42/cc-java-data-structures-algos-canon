@@ -36,8 +36,9 @@ public class Graph {
 
 	public void addEdge(Vertex v1, Vertex v2, int weight) {
 		if (!isWeighted) {
-			weight = null;
+			throw new Error("Can't give a weight to an unweighted graph!");
 		}
+
 		v1.addEdge(v2, weight);
 		if(!this.isDirected) {
 			v2.addEdge(v1, weight);
