@@ -26,8 +26,15 @@ public class Graph {
 	public void removeVertex(Vertex v){
 		this.vertices.remove(v);
 	}
-	
-	public void addEdge(Vertex v1, Vertex v2, Integer weight) {
+
+	public void addEdge(Vertex v1, Vertex v2) {
+		v1.addEdge(v2);
+		if(!this.isDirected) {
+			v2.addEdge(v1);
+		}
+	}
+
+	public void addEdge(Vertex v1, Vertex v2, int weight) {
 		if (!isWeighted) {
 			weight = null;
 		}
@@ -72,6 +79,15 @@ public class Graph {
 		trainNetwork.removeEdge(atlantaStation, newYorkStation);
 
 		trainNetwork.print();
+
+		Graph unweightedNetwork = new Graph(false, false);
+		Vertex v1 = unweightedNetwork.addVertex("v1");
+		Vertex v2 = unweightedNetwork.addVertex("v2");
+		Vertex v3 = unweightedNetwork.addVertex("v3");
+
+		unweightedNetwork.addEdge(v1, v2);
+		unweightedNetwork.addEdge(v2, v3);
+		unweightedNetwork.print();
 		
 	}
 }

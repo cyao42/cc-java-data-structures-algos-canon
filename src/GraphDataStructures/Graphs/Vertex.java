@@ -20,7 +20,11 @@ public class Vertex {
 		return this.edges;
 	}
 
-	public void addEdge(Vertex v, Integer weight) {
+	public void addEdge(Vertex v) {
+		this.edges.add(new Edge(this, v));
+	}
+
+	public void addEdge(Vertex v, int weight) {
 		this.edges.add(new Edge(this, v, weight));
 	}
 	

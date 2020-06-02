@@ -3,9 +3,14 @@ package GraphDataStructures.Graphs;
 public class Edge {
 	private Vertex start;
 	private Vertex end;
-	private Integer weight;
-	
-	public Edge(Vertex startV, Vertex endV, Integer inputWeight) {
+	private int weight;
+
+	public Edge(Vertex startV, Vertex endV) {
+		this.start = startV;
+		this.end = endV;
+	}
+
+	public Edge(Vertex startV, Vertex endV, int inputWeight) {
 		this.start = startV;
 		this.end = endV;
 		this.weight = inputWeight;
@@ -19,7 +24,7 @@ public class Edge {
 		return this.end;
 	}
 	
-	public Integer getWeight() {
+	public int getWeight() {
 		return this.weight;
 	}
 	
