@@ -51,4 +51,8 @@ public class HashMap {
         }
         return null;
     }
+
+    static public void main(String[] args) {
+
+    } 
 }

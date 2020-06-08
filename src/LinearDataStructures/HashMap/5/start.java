@@ -20,6 +20,9 @@ public class HashMap {
     public void assign(String key, String value) {
         int arrayIndex = this.hash(key);
         this.hashmap[arrayIndex] = value;
+    }
+
+    static public void main(String[] args) {
 
     }
 }

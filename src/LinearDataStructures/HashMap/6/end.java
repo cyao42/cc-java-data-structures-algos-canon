@@ -28,6 +28,15 @@ public class HashMap {
         return this.hashmap[arrayIndex];
     }
 
+    static public void main(String[] args) {
+        HashMap parkInventory = new HashMap(2);
+        parkInventory.assign("reed", "marsh plant");
+        parkInventory.assign("deer", "forest animal");
+
+        System.out.println(parkInventory.retrieve("reed"));
+        System.out.println(parkInventory.retrieve("deer"));
+    }
+
 }
 
 // HashMap parkInventory = new HashMap(2);

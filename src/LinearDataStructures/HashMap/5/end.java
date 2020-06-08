@@ -28,8 +28,10 @@ public class HashMap {
         return this.hashmap[arrayIndex];
     }
 
+    static public void main(String[] args) {
+    HashMap aboutMe = new HashMap(3);
+    glossary.assign("myFavoriteColor", "brown");
+    System.out.println(glossary.retrieve("myFavoriateColor"));
+    }
 }
 
-// HashMap glossary = new HashMap(3);
-// glossary.assign("sermordnilap", "Words that form different words when reversed");
-// System.out.println(glossary.retrieve("sermordnilap"));

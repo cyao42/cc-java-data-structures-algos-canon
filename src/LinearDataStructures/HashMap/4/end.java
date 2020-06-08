@@ -1,5 +1,7 @@
 package LinearDataStructures.HashMap;
 
+import java.util.Arrays;
+
 public class HashMap {
 
     public String[] hashmap;
@@ -20,10 +22,11 @@ public class HashMap {
     public void assign(String key, String value) {
         int arrayIndex = this.hash(key);
         this.hashmap[arrayIndex] = value;
-
     }
+
+    static public void main(String[] args) {
+      HashMap employees = new HashMap(3);
+      employees.assign("34-567", "Mara");
+      System.out.println(Arrays.toString(employees.hashmap));
+    } 
 }
-
-// employees.assign("34-567", "Maria");
-// System.out.println(Arrays.toString(employees.hashmap)); -> [null, Maria, null]
-

@@ -29,4 +29,7 @@ public class HashMap {
         }
     }
 
+    static public void main(String[] args) {
+      
+    } 
 }

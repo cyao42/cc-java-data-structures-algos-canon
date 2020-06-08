@@ -16,4 +16,7 @@ public class HashMap {
         return hashCode;
     }
 
+    static public void main(String[] args) {
+
+    }
 }

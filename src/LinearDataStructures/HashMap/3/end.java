@@ -17,6 +17,11 @@ public class HashMap {
         return hashCode;
     }
 
+    static public void main(String[] args) {
+        HashMap myHashMap = new HashMap(3);
+        System.out.println(myHashMap.hash("id"));
+        System.out.println(myHashMap.hash("id"));
+    }
 }
 
 // Checkpoint 2 - Main.java file

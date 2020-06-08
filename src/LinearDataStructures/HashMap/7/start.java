@@ -19,9 +19,10 @@ public class HashMap {
 
     public void assign(String key, String value) {
         int arrayIndex = this.hash(key);
-
     }
 
-
+    static public void main(String[] args) {
+      
+    } 
 }
 

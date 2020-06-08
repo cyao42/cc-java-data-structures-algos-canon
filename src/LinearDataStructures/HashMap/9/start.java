@@ -44,4 +44,7 @@ public class HashMap {
         int arrayIndex = this.hash(key);
     }
 
+    static public void main(String[] args) {
+      
+    } 
 }
