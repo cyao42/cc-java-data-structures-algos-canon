@@ -8,7 +8,7 @@ public class HashMap {
           this.hashmap = new String[size];
     }
 
-    static public void main(String[] args) {
+    public static void main(String[] args) {
 
     }
 

@@ -14,7 +14,7 @@ public class HashMap {
     public int hash(String key) {
         int hashCode = 0;
         for (int i = 0; i < key.length(); i++) {
-            hashCode += hashCode + Character.codePointAt(key, i);
+            hashCode = hashCode + Character.codePointAt(key, i);
         }
         hashCode = hashCode % this.hashmap.length;
         return hashCode;
@@ -52,7 +52,7 @@ public class HashMap {
         return null;
     }
 
-    static public void main(String[] args) {
+    public static void main(String[] args) {
         HashMap birdCensus = new HashMap(16);
         birdCensus.assign("mandarin duck", "Central Park Pond");
         birdCensus.assign("monk parakeet", "Brooklyn College");
