@@ -10,7 +10,7 @@ public class Stack {
     public static void main(String[]args) {
         /*
         Stack stack = new Stack();
-        System.out.println("This stack has " + this.size + " nodes.");
+        System.out.println("This stack has " + stack.size + " nodes.");
          */
     }
 }
