@@ -38,4 +38,6 @@ public class Stack {
         return this.stack.head.data;
     }
     
+    public static void main(String[]args) { }
+    
 }
