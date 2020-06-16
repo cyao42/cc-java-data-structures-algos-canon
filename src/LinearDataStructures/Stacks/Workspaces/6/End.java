@@ -54,10 +54,8 @@ public class Stack {
     }
 
     public static void main(String[]args) {
-        /*
         Stack carsInDriveWay = new Stack();
         carsInDriveWay.push("van");
         carsInDriveWay.push("convertible");
-         */
     }
 }
