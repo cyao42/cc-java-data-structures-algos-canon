@@ -35,11 +35,12 @@ public class Stack {
     }
 
     public static void main(String[]args) {
-        Stack carsInDriveWay = new Stack();
-        carsInDriveWay.push("van");
-        carsInDriveWay.push("convertible");
-        carsInDriveWay.push("truck");
-        System.out.println("The driveway is full! The " + carsInDriveWay.peek() + " needs to leave first.");
-        carsInDriveWay.pop();
+        Stack bracelets = new Stack();
+        bracelets.push("silver bangle");
+        bracelets.push("gold bangle");
+        bracelets.push("bronze bangle");
+        System.out.println("I decided I only want to wear the silver bangle!");
+        bracelets.pop();
+        bracelets.pop();
     }
 }
