@@ -18,13 +18,5 @@ public class Stack {
     // Define push() below
 
 
-    public static void main(String[]args) {
-      /*
-        Stack dishStack = new Stack();
-        dishStack.push("large plate");
-        dishStack.push("small plate");
-        dishStack.push("bowl");
-       */
-
-    }
+    public static void main(String[]args) { }
 }
