@@ -4,7 +4,7 @@ public class PizzaDelivery {
     public Stack pizzaHouse;
 
     public PizzaDelivery() {
-        // Instantiate deliveryGal and pizzaHouse stacks below
+        // 1. Instantiate deliveryGal and pizzaHouse stacks below
         this.deliveryGal = new Stack(4);
         this.pizzaHouse = new Stack();
 
@@ -13,12 +13,12 @@ public class PizzaDelivery {
     public void assign(String [] pizzas) {
         for (String pizza : pizzas) {
             try {
-                // Push pizzas onto deliveryGal and print the update
+                // 2. Push pizzas onto deliveryGal and print the update
                 deliveryGal.push(pizza);
                 System.out.println(pizza + " pizza was added to the deliveryGal stack.");
                 
             } catch (Error e) {
-                // Push pizzas onto pizzaHouse and print the update
+                // 3. Push pizzas onto pizzaHouse and print the update
                 pizzaHouse.push(pizza);
                 System.out.println("deliveryGal left to make deliveries! " + pizza + " pizza was added to the pizzaHouse stack.");
             }
@@ -30,7 +30,7 @@ public class PizzaDelivery {
     public void deliver() {
         int numPizzas = deliveryGal.size;
         for (int i = 0; i < numPizzas; i++) {
-            // Pop off each pizza from deliveryGal and print the update
+            // 4. Pop off each pizza from deliveryGal and print the update
             String pizzaType = deliveryGal.pop();
             System.out.println(pizzaType + " pizza was delivered!");
         }
