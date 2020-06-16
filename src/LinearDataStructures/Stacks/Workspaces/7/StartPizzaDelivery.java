@@ -4,18 +4,18 @@ public class PizzaDelivery {
     public Stack pizzaHouse;
 
     public PizzaDelivery() {
-        // Instantiate deliveryGal and pizzaHouse stacks below
+        // 1. Instantiate deliveryGal and pizzaHouse stacks below
 
     }
 
     public void assign(String [] pizzas) {
         for (String pizza : pizzas) {
             try {
-                // Push pizzas onto deliveryGal and print the update
+                // 2. Push pizzas onto deliveryGal and print the update
 
 
             } catch (Error e) {
-                // Push pizzas onto pizzaHouse and print the update
+                // 3. Push pizzas onto pizzaHouse and print the update
 
             }
         }
@@ -26,7 +26,7 @@ public class PizzaDelivery {
     public void deliver() {
         int numPizzas = deliveryGal.size;
         for (int i = 0; i < numPizzas; i++) {
-            // Pop off each pizza from deliveryGal and print the update
+            // 4. Pop off each pizza from deliveryGal and print the update
             
         }
     }
