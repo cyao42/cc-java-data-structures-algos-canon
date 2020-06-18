@@ -36,10 +36,10 @@ public class Stack {
 
     public static void main(String[]args) {
         Stack bracelets = new Stack();
-        bracelets.push("silver bangle");
-        bracelets.push("gold bangle");
-        bracelets.push("bronze bangle");
-        System.out.println("I decided I only want to wear the silver bangle!");
+        bracelets.push("silver");
+        bracelets.push("gold");
+        bracelets.push("bronze");
+        System.out.println("I decided I only want to wear the silver bracelet!");
         bracelets.pop();
         bracelets.pop();
     }
