@@ -19,7 +19,7 @@ public class Stack {
         System.out.println("stackOne can have " + stackOne.maxSize + " nodes!");
         Stack stackTwo = new Stack();
         System.out.println("stackTwo can have " + stackTwo.maxSize + " nodes!");
-      /*
+      */
 
     }
 }
