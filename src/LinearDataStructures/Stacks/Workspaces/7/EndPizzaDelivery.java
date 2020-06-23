@@ -14,12 +14,12 @@ public class PizzaDelivery {
         for (String pizza : pizzas) {
             try {
                 // 2. Push pizzas onto deliveryGal and print the update
-                deliveryGal.push(pizza);
+                this.deliveryGal.push(pizza);
                 System.out.println(pizza + " pizza was added to the deliveryGal stack.");
                 
             } catch (Error e) {
                 // 3. Push pizzas onto pizzaHouse and print the update
-                pizzaHouse.push(pizza);
+                this.pizzaHouse.push(pizza);
                 System.out.println("deliveryGal left to make deliveries! " + pizza + " pizza was added to the pizzaHouse stack.");
             }
         }
@@ -31,7 +31,7 @@ public class PizzaDelivery {
         int numPizzas = deliveryGal.size;
         for (int i = 0; i < numPizzas; i++) {
             // 4. Pop off each pizza from deliveryGal and print the update
-            String pizzaType = deliveryGal.pop();
+            String pizzaType = this.deliveryGal.pop();
             System.out.println(pizzaType + " pizza was delivered!");
         }
     }
