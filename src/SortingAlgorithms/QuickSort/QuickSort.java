@@ -36,6 +36,7 @@ public class QuickSort {
             }
             if (leftIndex <= rightIndex) {
                 swap(arr, leftIndex, rightIndex);
+                System.out.println("Swapping " + arr[leftIndex] + " and " + arr[rightIndex]);
                 leftIndex++;
                 rightIndex--;
             }
