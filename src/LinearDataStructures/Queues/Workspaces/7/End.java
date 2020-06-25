@@ -37,7 +37,7 @@ public class Queue {
         if (!this.isEmpty()) {
             String data = this.queue.removeHead();
             this.size--;
-            System.out.println("Removed " + data + "! Queue size is now " + this.size + ".");
+            System.out.println("Removed " + data + "! Queue size is now " + this.size);
             return data;
         } else {
             throw new Error("Queue is empty!");

@@ -11,7 +11,7 @@ public class HashMap {
     public int hash(String key) {
         int hashCode = 0;
         for (int i = 0; i < key.length(); i++) {
-            hashCode += hashCode + Character.codePointAt(key, i);
+            hashCode = hashCode + Character.codePointAt(key, i);
         }
         hashCode = hashCode % this.hashmap.length;
         return hashCode;
@@ -28,11 +28,12 @@ public class HashMap {
         return this.hashmap[arrayIndex];
     }
 
+    public static void main(String[] args) {
+        HashMap parkInventory = new HashMap(2);
+        parkInventory.assign("reed", "marsh plant");
+        parkInventory.assign("deer", "forest animal");
+
+        System.out.println(parkInventory.retrieve("reed"));
+        System.out.println(parkInventory.retrieve("deer"));
+    } 
 }
-
-// HashMap parkInventory = new HashMap(2);
-// parkInventory.assign("reed", "marsh plant");
-// parkInventory.assign("deer", "forest animal");
-
-// System.out.println(parkInventory.retrieve("reed"));
-// System.out.println(parkInventory.retrieve("deer"));
