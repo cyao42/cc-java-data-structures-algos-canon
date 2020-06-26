@@ -28,7 +28,7 @@ public class PizzaDelivery {
         System.out.println("---------------------------");
     }
     public void deliver() {
-        int numPizzas = deliveryGal.size;
+        int numPizzas = this.deliveryGal.size;
         for (int i = 0; i < numPizzas; i++) {
             // 4. Pop off each pizza from deliveryGal and print the update
             String pizzaType = this.deliveryGal.pop();
