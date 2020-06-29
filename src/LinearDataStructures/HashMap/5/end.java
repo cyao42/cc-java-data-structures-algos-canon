@@ -11,7 +11,7 @@ public class HashMap {
     public int hash(String key) {
         int hashCode = 0;
         for (int i = 0; i < key.length(); i++) {
-            hashCode += hashCode + Character.codePointAt(key, i);
+            hashCode = hashCode + Character.codePointAt(key, i);
         }
         hashCode = hashCode % this.hashmap.length;
         return hashCode;
@@ -28,8 +28,10 @@ public class HashMap {
         return this.hashmap[arrayIndex];
     }
 
+    public static void main(String[] args) {
+        HashMap aboutMe = new HashMap(3);
+        aboutMe.assign("myFavoriteColor", "brown");
+        System.out.println(aboutMe.retrieve("myFavoriateColor"));
+    }
 }
 
-// HashMap glossary = new HashMap(3);
-// glossary.assign("sermordnilap", "Words that form different words when reversed");
-// System.out.println(glossary.retrieve("sermordnilap"));

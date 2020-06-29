@@ -14,7 +14,7 @@ public class HashMap {
     public int hash(String key) {
         int hashCode = 0;
         for (int i = 0; i < key.length(); i++) {
-            hashCode += hashCode + Character.codePointAt(key, i);
+            hashCode = hashCode + Character.codePointAt(key, i);
         }
         hashCode = hashCode % this.hashmap.length;
         return hashCode;
@@ -51,4 +51,8 @@ public class HashMap {
         }
         return null;
     }
+
+    public static void main(String[] args) {
+
+    } 
 }

@@ -1,7 +1,3 @@
-package LinearDataStructures.SinglyLinkedLists;
-
-import Node;
-
 public class LinkedList {
 
     public Node head;
