@@ -1,5 +1,12 @@
 public class LinkedList {
 
+  public static void main(String []args) {
+    
+    // Create your code here:    
+
+
+  }
+
 	private Node head;
 
 	public LinkedList() {
@@ -46,12 +53,5 @@ public class LinkedList {
     output += "<tail>";
     return output;
   }  
-
-  public static void main(String []args) {
-    
-    // Create your code here:    
-
-
-  }
 
 }

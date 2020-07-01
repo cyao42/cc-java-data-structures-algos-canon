@@ -1,5 +1,24 @@
 public class LinkedList {
 
+  public static void main(String []args) {
+
+    // Create your code here:  
+    LinkedList seasons = new LinkedList();
+    System.out.println(seasons.toString());
+
+    seasons.addToHead("summer");
+    seasons.addToHead("spring");
+    System.out.println(seasons.toString());
+
+    seasons.addToTail("fall");
+    seasons.addToTail("winter");
+    System.out.println(seasons.toString());
+
+    seasons.removeHead();
+    System.out.println(seasons.toString());
+
+  }
+
   private Node head;
 
   public LinkedList() {
