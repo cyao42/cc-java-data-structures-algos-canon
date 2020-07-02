@@ -1,31 +1,32 @@
 package SortingAlgorithms.QuickSort;
-
 import static SortingAlgorithms.SortUtils.swap;
 
 public class QuickSort {
 
-    public int[] sort(int[] arr) {
+    public int[] quicksort(int[] arr) {
         if (arr.length <= 1) {
             return arr;
         }
-        return sort(arr, 0, arr.length - 1);
+        return quicksort(arr, 0, arr.length - 1);
     }
 
-    public int[] sort(int[] arr, int start, int end) {
-        if (arr.length > 1) {
-            int index = partition(arr, start, end);
-            if (start < index - 1) {
-                sort(arr, start, index - 1);
-            }
-            if (index < end) {
-                sort(arr, index, end);
-            }
+    public int[] quicksort(int[] arr, int start, int end) {
+        if (start == end) {
+            return arr;
+        }
+        int index = partition(arr, start, end);
+        if (start < index - 1) {
+            quicksort(arr, start, index - 1);
+        }
+        if (index < end) {
+            quicksort(arr, index, end);
         }
         return arr;
     }
 
     public int partition(int[] arr, int leftIndex, int rightIndex) {
         int pivot = arr[Math.floorDiv((leftIndex + rightIndex), 2)];
+        System.out.println("The pivot value is: " + pivot);
 
         while (leftIndex <= rightIndex) {
             while (arr[leftIndex] < pivot) {
@@ -36,6 +37,7 @@ public class QuickSort {
             }
             if (leftIndex <= rightIndex) {
                 swap(arr, leftIndex, rightIndex);
+                System.out.println("Swapping " + arr[leftIndex] + " and " + arr[rightIndex]);
                 leftIndex++;
                 rightIndex--;
             }
