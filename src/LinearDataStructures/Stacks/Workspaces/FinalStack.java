@@ -12,6 +12,7 @@ public class Stack {
     public Stack(int maxSize) {
         this.stack = new LinkedList();
         this.size = 0;
+        this.maxSize = maxSize;
     }
 
     public boolean hasSpace() {
