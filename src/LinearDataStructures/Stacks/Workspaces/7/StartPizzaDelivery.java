@@ -19,9 +19,9 @@ public class PizzaDelivery {
 
             }
         }
-        System.out.println("---------------------------");
-        System.out.println("Deliveries are underway...");
-        System.out.println("---------------------------");
+
+        System.out.println("\nDELIVERIES ARE UNDERWAY...\n");
+
     }
     public void deliver() {
         int numPizzas = this.deliveryGal.size;
