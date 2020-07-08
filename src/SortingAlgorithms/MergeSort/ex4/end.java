@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    public int[] sort(int arr[]) {
+    public int[] sort(int[] arr) {
         int length = arr.length;
         if (length <= 1) {
             return null;
@@ -10,7 +10,7 @@ public class MergeSort {
         int mid = Math.floorDiv(length, 2);
         int[] leftArray = Arrays.copyOfRange(arr, 0, mid);
         int[] rightArray = Arrays.copyOfRange(arr, mid, length);
-        return merge(sort(leftArray), sort(rightArray));
+        return merge(this.sort(leftArray), this.sort(rightArray));
     }
 
     public int[] merge(int left[], int[] right) {

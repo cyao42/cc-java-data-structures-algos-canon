@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    public int[] sort(int arr[]) {
+    public int[] sort(int[] arr) {
         int length = arr.length;
         if (length <= 1) {
             System.out.println(Arrays.toString(arr));

@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    public int[] sort(int arr[]) {
+    public int[] sort(int[] arr) {
         int length = arr.length;
         if (length <= 1) {
             System.out.println(Arrays.toString(arr));
@@ -11,9 +11,8 @@ public class MergeSort {
         int mid = Math.floorDiv(length, 2);
         int[] leftArray = Arrays.copyOfRange(arr, 0, mid);
         int[] rightArray = Arrays.copyOfRange(arr, mid, length);
-        sort(leftArray);
-        sort(rightArray);
-        // should i return this in exercise 2?
+        this.sort(leftArray);
+        this.sort(rightArray);
         return null;
     }
 
