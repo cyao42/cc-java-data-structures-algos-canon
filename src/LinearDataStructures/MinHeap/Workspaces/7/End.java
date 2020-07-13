@@ -48,7 +48,9 @@ public class MinHeap {
         int rightChild = this.getRight(current);
 
         while (this.canSwap(current,leftChild,rightChild)) {
-            
+            current = leftChild;
+            leftChild = this.getLeft(current);
+            rightChild = this.getRight(current);
         }
     }
     
