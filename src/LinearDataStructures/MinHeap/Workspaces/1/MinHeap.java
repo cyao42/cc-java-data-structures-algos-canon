@@ -49,9 +49,9 @@ public class MinHeap {
                     this.swap(current, rightChild);
                     current = rightChild;
                 }
-                leftChild = this.getLeft(current);
-                rightChild = this.getRight(current);
             }
+            leftChild = this.getLeft(current);
+            rightChild = this.getRight(current);
         }
     }
 
