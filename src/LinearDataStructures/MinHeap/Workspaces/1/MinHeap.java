@@ -70,15 +70,15 @@ public class MinHeap {
                 || (this.exists(rightChild) && (this.heap.get(current) > this.heap.get(rightChild)));
     }
 
-    private int getParent(int current) {
+    public int getParent(int current) {
         return (int) Math.floor(current / 2);
     }
 
-    private int getLeft(int current) {
+    public int getLeft(int current) {
         return current * 2;
     }
 
-    private int getRight(int current) {
+    public int getRight(int current) {
         return (current * 2) + 1;
     }
 
