@@ -28,7 +28,6 @@ public class MinHeap {
         System.out.println("Removed from the heap: " + min);
         System.out.println(this.heap);
         this.size--;
-        this.heapify();
         return min;
     }
 
