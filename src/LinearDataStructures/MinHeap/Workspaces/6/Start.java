@@ -18,7 +18,7 @@ public class MinHeap {
         this.bubbleUp();
     }
 
-    // Define popMin() below
+    // Complete popMin() below
     public int popMin() {
         return 0;
     }
