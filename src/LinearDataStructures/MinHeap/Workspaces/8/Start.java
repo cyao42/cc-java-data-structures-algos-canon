@@ -42,7 +42,6 @@ public class MinHeap {
         }
     }
 
-    // Define heapify() below
     private void heapify() {
         int current = 1;
         int leftChild = this.getLeft(current);
