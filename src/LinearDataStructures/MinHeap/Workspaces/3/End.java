@@ -20,7 +20,7 @@ public class MinHeap {
 
     // Define bubbleUp() below
     private void bubbleUp() {
-        System.out.println("Restoring heap properties...");
+        System.out.println("Restoring heap condition...");
     }
 
     public static void main(String[]args) {
