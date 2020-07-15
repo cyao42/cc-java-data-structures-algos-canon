@@ -18,7 +18,7 @@ public class MinHeap {
     }
 
     private void bubbleUp() {
-        System.out.println("Restoring heap properties...");
+        System.out.println("Restoring heap condition...");
     }
 
     public int getParent(int current) {
