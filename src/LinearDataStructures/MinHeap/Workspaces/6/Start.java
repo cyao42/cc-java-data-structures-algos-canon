@@ -58,7 +58,7 @@ public class MinHeap {
             int int_random = r.nextInt(40);
             minHeap.add(int_random);
         }
-        System.out.println("Bubbled up heap " + minHeap.heap);
+        System.out.println("BUBBLED UP: " + minHeap.heap);
 
         // Remove the minimum value
         minHeap.popMin();
