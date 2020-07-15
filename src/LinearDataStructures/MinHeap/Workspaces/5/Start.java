@@ -54,7 +54,7 @@ public class MinHeap {
         }
 
         // Display the heap after bubbling up
-        System.out.println("Bubbled up heap " + minHeap.heap);
+        System.out.println("BUBBLED UP: " + minHeap.heap);
 
     }
 }
