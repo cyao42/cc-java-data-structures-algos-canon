@@ -22,7 +22,7 @@ public class MinHeap {
         // Instantiate current below
         int current = this.size;
         // Create the while loop below
-        while (current > 1 && this.heap.get(this.getParent(current)) > this.heap.get(current)) {
+        while (current > 1 && this.heap.get(current) < this.heap.get(this.getParent(current))) {
             System.out.println("Swap index " + current + " with index " + this.getParent(current));
             System.out.println(this.heap);
             this.swap(current, this.getParent(current));
