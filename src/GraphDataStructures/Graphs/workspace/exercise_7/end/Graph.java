@@ -1,51 +1,54 @@
-package GraphDataStructures.Graphs;
+package GraphDataStructures.Graphs.workspace.exercise_7.end;
 
 import java.util.ArrayList;
 
 public class Graph {
 	private ArrayList<Vertex> vertices;
-	private boolean isDirected;
 	private boolean isWeighted;
-	
+	private boolean isDirected;
+
 	public Graph(boolean inputIsWeighted, boolean inputIsDirected) {
 		this.vertices = new ArrayList<Vertex>();
 		this.isWeighted = inputIsWeighted;
 		this.isDirected = inputIsDirected;
 	}
-	
-	public ArrayList<Vertex> getVertices() {
-		return this.vertices;
-	}
-	
+
 	public Vertex addVertex(String data) {
 		Vertex newVertex = new Vertex(data);
 		this.vertices.add(newVertex);
+
 		return newVertex;
 	}
-	
-	public void removeVertex(Vertex v){
-		this.vertices.remove(v);
-	}
-	
-	public void addEdge(Vertex v1, Vertex v2, Integer weight) {
-		if (!isWeighted) {
+
+	public void addEdge(Vertex vertex1, Vertex vertex2, Integer weight) {
+		if (!this.isWeighted) {
 			weight = null;
 		}
-		v1.addEdge(v2, weight);
-		if(!this.isDirected) {
-			v2.addEdge(v1, weight);
+
+		vertex1.addEdge(vertex2, weight);
+
+		if (!this.isDirected) {
+			vertex2.addEdge(vertex1, weight);
 		}
 	}
-	
-	public void removeEdge(Vertex v1, Vertex v2) {
-		v1.removeEdge(v2);
-		if(!this.isDirected) {
-			v2.removeEdge(v1);
+
+	public void removeEdge(Vertex vertex1, Vertex vertex2) {
+		vertex1.removeEdge(vertex2);
+
+		if (!this.isDirected) {
+			vertex2.removeEdge(vertex1);
 		}
 	}
-	
+
+	public void removeVertex(Vertex vertex) {
+		this.vertices.remove(vertex);
+	}
+
+	public ArrayList<Vertex> getVertices() {
+		return this.vertices;
+	}
+
 	public Vertex getVertexByValue(String value) {
-		//This is weird as well. Not sure what we should do if the vertex doesn't exist in the graph
 		for(Vertex v: this.vertices) { 
 			if (v.getData() == value) {
 				return v;
@@ -62,16 +65,14 @@ public class Graph {
 	}
 	
 	public static void main(String[] args) {
-		Graph trainNetwork = new Graph(true, false);
+		Graph trainNetwork = new Graph(true, true);
 		Vertex atlantaStation = trainNetwork.addVertex("Atlanta");
-		Vertex denverStation = trainNetwork.addVertex("Denver");
 		Vertex newYorkStation = trainNetwork.addVertex("New York");
-		trainNetwork.addEdge(atlantaStation, newYorkStation, 100);
-		trainNetwork.addEdge(atlantaStation, denverStation, 200);
-		trainNetwork.addEdge(denverStation, newYorkStation, 300);
+
+		trainNetwork.addEdge(atlantaStation, newYorkStation, 800);
+
 		trainNetwork.removeEdge(atlantaStation, newYorkStation);
 
 		trainNetwork.print();
-		
 	}
 }

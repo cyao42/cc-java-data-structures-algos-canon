@@ -1,4 +1,4 @@
-package GraphDataStructures.Graphs;
+package GraphDataStructures.Graphs.workspace.exercise_1.end;
 
 public class Edge {
 	private Vertex start;

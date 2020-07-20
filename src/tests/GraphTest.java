@@ -66,7 +66,7 @@ class GraphTest {
         Vertex v1 = g.addVertex("A");
         Vertex v2 = g.addVertex("B");
         g.addEdge(v1, v2, 100);
-        assertEquals("The weight between v1 and v2 should be 0", g.getVertexByValue("A").getEdges().get(0).getWeight(), 0);
+        assertEquals("The weight between v1 and v2 should be null", g.getVertexByValue("A").getEdges().get(0).getWeight(), null);
     }
 
 

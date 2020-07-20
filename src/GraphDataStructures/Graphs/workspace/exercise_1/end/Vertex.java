@@ -1,17 +1,16 @@
-package GraphDataStructures.Graphs;
+package GraphDataStructures.Graphs.workspace.exercise_1.end;
 
 import java.util.ArrayList;
 
 public class Vertex {
-
 	private String data;
 	private ArrayList<Edge> edges;
-	
+
 	public Vertex(String inputData) {
 		this.data = inputData;
 		this.edges = new ArrayList<Edge>();
 	}
-	
+
 	public String getData() {
 		return this.data;
 	}
@@ -20,15 +19,6 @@ public class Vertex {
 		return this.edges;
 	}
 
-	public void addEdge(Vertex v, Integer weight) {
-		this.edges.add(new Edge(this, v, weight));
-	}
-	
-	public void removeEdge(Vertex v) {
-		//I don't love this solution, we don't teach removeIf
-		this.edges.removeIf(e -> e.getEnd().equals(v));
-	}
-	
 	public void print(boolean showWeight) {
 		String message = "";
 		
@@ -54,21 +44,8 @@ public class Vertex {
 		}
 		System.out.println(message);
 	}
-	
-	
+
 	public static void main(String[] args) {
-		Vertex a = new Vertex("Alex");
-		Vertex b = new Vertex("Carolyn");
-		Vertex c = new Vertex("Alisha");
-		a.addEdge(b, 100);
-		a.addEdge(c, 200);
-		b.addEdge(c, 300);
-		
-		a.print(true);
-		b.print(true);
-		
-		b.removeEdge(c);
-		b.print(true);
-		
+
 	}
 }
