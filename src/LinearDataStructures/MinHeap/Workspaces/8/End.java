@@ -51,8 +51,7 @@ public class MinHeap {
                 if (this.heap.get(leftChild) < this.heap.get(rightChild)) {
                     this.swap(current, leftChild);
                     current = leftChild;
-                }
-                if (this.heap.get(rightChild) < this.heap.get(leftChild)) {
+                } else {
                     this.swap(current, rightChild);
                     current = rightChild;
                 }
