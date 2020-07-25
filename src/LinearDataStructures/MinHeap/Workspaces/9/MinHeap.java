@@ -31,7 +31,7 @@ public class MinHeap {
     private void bubbleUp() {
         int current = this.size;
         int swapCount = 0;
-        while (current > 1 && this.heap.get(this.getParent(current)) > this.heap.get(current)) {
+        while (current > 1 && this.heap.get(current) < this.heap.get(this.getParent(current))) {
             this.swap(current, this.getParent(current));
             current = this.getParent(current);
             swapCount++;
