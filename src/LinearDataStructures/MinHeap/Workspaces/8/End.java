@@ -34,7 +34,7 @@ public class MinHeap {
 
     private void bubbleUp() {
         int current = this.size;
-        while (current > 1 && this.heap.get(this.getParent(current)) > this.heap.get(current)) {
+        while (current > 1 && this.heap.get(current) < this.heap.get(this.getParent(current))) {
             System.out.println("Swap index " + current + " with index " + this.getParent(current));
             System.out.println(this.heap);
             this.swap(current, this.getParent(current));
