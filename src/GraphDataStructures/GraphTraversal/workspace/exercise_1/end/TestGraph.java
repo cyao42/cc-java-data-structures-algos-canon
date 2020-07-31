@@ -1,4 +1,4 @@
-package GraphDataStructures.GraphTraversal.workspace.exercise_1.start;
+package GraphDataStructures.GraphTraversal.workspace.exercise_1.end;
 import GraphDataStructures.Graphs.Graph;
 import GraphDataStructures.Graphs.Vertex;
 
