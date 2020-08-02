@@ -19,9 +19,6 @@ class GraphTraverser {
 	}
 
 	public static void breadthFirstTraversal(Vertex start) {
-        ArrayList<Vertex> visitedVertices = new ArrayList<Vertex>();
-        visitedVertices.add(start);
-
         Queue visitQueue = new Queue();
         visitQueue.enqueue(start);
         while (!visitQueue.isEmpty()) {
@@ -40,6 +37,8 @@ class GraphTraverser {
 	public static void main(String[] args) {
 		TestGraph test = new TestGraph();
 		Vertex startingVertex = test.getStartingVertex();
+		ArrayList<Vertex> visitedVertices = new ArrayList<Vertex>();
+        visitedVertices.add(startingVertex);
 
 		GraphTraverser.breadthFirstTraversal(startingVertex);
 	}
