@@ -14,7 +14,6 @@ public class Dijkstra {
         Dictionary<String, Vertex> previous = new Hashtable<>();
         PriorityQueue<QueueObject> queue = new PriorityQueue<QueueObject>();
 
-        distances.put(startingVertex.getData(), 0);
         queue.add(new QueueObject(startingVertex, 0));
 
         for (Vertex v: g.getVertices()) {
@@ -23,6 +22,9 @@ public class Dijkstra {
             }
             previous.put(v.getData(), new Vertex("Null"));
         }
+
+        distances.put(startingVertex.getData(), 0);
+
 
         while(queue.size() != 0){
             Vertex current = queue.poll().vertex;
@@ -49,10 +51,10 @@ public class Dijkstra {
         System.out.println(distance);
 
         ArrayList<Vertex> path = new ArrayList<>();
-        Vertex v = targetVertex;
-        while(v.getData() != "Null"){
-            path.add(0,v);
-            v = (Vertex) previous.get(v.getData());
+        Vertex tempVertex = targetVertex;
+        while(tempVertex.getData() != "Null"){
+            path.add(0,tempVertex);
+            tempVertex = (Vertex) previous.get(tempVertex.getData());
         }
         System.out.println("Shortest Path");
         for (Vertex pathVertex: path){
